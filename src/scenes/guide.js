@@ -7,6 +7,7 @@ export default class Guide extends Component {
       return(
         <Container fluid>
             <Header headerTitle="Guidance page" />
+            <Container fluid><h2>This is Guidance Sample page </h2></Container>
         </Container>
       )
   }

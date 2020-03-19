@@ -7,6 +7,7 @@ export default class Intro extends Component {
       return(
         <Container fluid>
         <Header headerTitle="Reference page" />
+        <Container fluid><h2>This is Reference Sample page </h2></Container>
         </Container>
       )
   }

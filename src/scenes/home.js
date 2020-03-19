@@ -2,11 +2,41 @@ import React, { Component, Suspense } from 'react'
 import Header from "../components/Header"
 
 import { Container, Row,Col } from 'react-bootstrap'
+const axios = require('axios');
+const API_URL ="http://192.168.164.149:3000/localdata/localdata.json"
 const CardComp = React.lazy(() => import("../components/CardComponent")) 
-const  linkObj1=[{title:"Developer's Guide",link:"/developer/en/api/dummy1/guide"},{title:"API Reference",link:"/developer/en/api/dummy1/reference"}]
-const  linkObj2=[{title:"Intro",link:"/developer/en/api/dummy1/intro"},{title:"Developer's Guide",link:"/developer/en/api/dummy1/guide"},{title:"API Reference", link:"/developer/en/api/dummy1/reference"}]
+const  linkObj1=[{lTitle:"Developer's Guide",link:"/developer/en/api/dummy1/guide"},{lTitle:"API Reference",link:"/developer/en/api/dummy1/reference"}]
+const  linkObj2=[{lTitle:"Intro",link:"/developer/en/api/dummy1/intro"},{lTitle:"Developer's Guide",link:"/developer/en/api/dummy1/guide"},{lTitle:"API Reference", link:"/developer/en/api/dummy1/reference"}]
+let tempData=new Array()
 class Home extends Component{
+    constructor(props){
+        super(props)
+        this.state = { cardData:[] }
+    }
+   
+    callApi = async () => {
+        let response = await axios.get(API_URL, {
+            headers: {
+              'Access-Control-Allow-Origin': '*',
+            },
+            });
+            let j=0;
+            // for(let i=tempData.length;i<response.data.length;i++){
+            //     tempData[i] = response.data[j];
+            //     j++;
+            // }
+            for(j=0;j < response.data.length;j++ ){
+                tempData.push(response.data[j])
+            }
+            this.setState({cardData:tempData})
+    }
+    componentDidMount(){ 
+       
+       setInterval(()=>{ this.callApi() }, 3000);
+    }
     render(){
+        const { cardData } = this.state
+        console.log("CardData ",cardData)
         return(
             <Container fluid>
                 <Header headerTitle="DOCUMENTATION" />
@@ -63,9 +93,21 @@ class Home extends Component{
                      <CardComp title="Reality Capture" desc="Convert digital images into high resolution textured meshes, dense point clouds and orthophotos."
                             icon="movie_filter" link={linkObj2}
                         />
-                     </Suspense>
-                        
+                     </Suspense>   
                      </Col>
+                </Row>
+                <Row>
+                {
+                    cardData.length > 0 ? cardData.map((item,index)=>(
+                        <Col style={{marginTop:15}}>
+                     <Suspense fallback={<div>Loading...</div>}>
+                     <CardComp title={item.title} desc={item.desc}
+                            icon={item.icon} link={item.links}
+                        />
+                     </Suspense>   
+                     </Col>
+                    )):<Col/>
+                }
                 </Row>
                 </Container>
                 

@@ -36,7 +36,7 @@ class CardComponent extends Component {
                 <ListGroup variant="flush" style={{ position:'absolute', bottom:5,width:'90%'}}>
                     {link.map((item,index)=>(
                             <ListGroup.Item  > 
-                            <Link style={{textDecoration:'none',fontSize:18,color:'#777'}} to={item.link}>{item.title}
+                            <Link style={{textDecoration:'none',fontSize:18,color:'#777'}} to={item.link}>{item.lTitle}
                             <div style={{float:'right'}}><MaterialIcon icon="keyboard_arrow_right" /></div>
                             </Link>
                             </ListGroup.Item>

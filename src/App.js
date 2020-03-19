@@ -16,8 +16,7 @@ import ReferencePage from "./scenes/reference"
 const  App=() =>{
   return (
       <Router>
-         <Switch>
-           
+         <Switch>       
             <Route exact path="/developer/documentation" component={ HomePage } />
             <Route exact path="/developer/en/api/dummy1/intro" component={ IntroPage } />
             <Route exact path="/developer/en/api/dummy1/guide" component={ GuidePage } />

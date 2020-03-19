@@ -1,0 +1,38 @@
+[
+{
+"title":"Authentication",
+"desc":"Generate tokens based on the OAuth 2.0 standard to authenticate requests made to Forge APIs and SDKs.",
+"links":[{"lTitle":"Developer's Guide","link":"/developer/en/api/dummy1/guide"}, {"lTitle":"API Reference","link":"/developer/en/api/dummy1/reference"}],
+"icon":"vpn_key"
+},
+{
+"title":"BM 360",
+"desc":"Integrate with the Autodesk BIM 360 platform to extend its capabilities to reach segments of the construction ecosystem that don’t have direct access to BIM data.",
+"links":[{"lTitle":"Intro","link":"/developer/en/api/dummy1/intro"}, {"lTitle":"Developers's Guide","link":"/developer/en/api/dummy1/guide"},{"lTitle":"API Reference","link":"/developer/en/api/dummy1/reference"}],
+"icon":"widgets"
+},
+{
+"title":"Data Management",
+"desc":"Access data across BIM 360 team, Fusion Team, BIM 360 Docs, and the Object Storage Service to build apps to display and extend your data.",
+"links":[{"lTitle":"Intro","link":"/developer/en/api/dummy1/intro"}, {"lTitle":"Developers's Guide","link":"/developer/en/api/dummy1/guide"},{"lTitle":"API Reference","link":"/developer/en/api/dummy1/reference"}],
+"icon":"cloud_circle"
+},
+{
+"title":"Design Automation",
+"desc":"GAutomate repetitive tasks by leveraging on the scale of the Forge Platform and running scripts on your design files in the cloud.",
+"links":[{"lTitle":"Intro","link":"/developer/en/api/dummy1/intro"}, {"lTitle":"Developers's Guide","link":"/developer/en/api/dummy1/guide"},{"lTitle":"API Reference","link":"/developer/en/api/dummy1/reference"}],
+"icon":"ac_unit"
+},
+{
+"title":"Model Derrivative",
+"desc":"Derive outputs viewable by the Forge Viewer from more than 60 CAD file formats, and extract metadata about the models as well as the individual objects within the model.",
+"links":[{"lTitle":"Intro","link":"/developer/en/api/dummy1/intro"}, {"lTitle":"Developers's Guide","link":"/developer/en/api/dummy1/guide"},{"lTitle":"API Reference","link":"/developer/en/api/dummy1/reference"}],
+"icon":"filter_vintage"
+},
+{
+"title":"Reality Capture",
+"desc":"Convert digital images into high resolution textured meshes, dense point clouds and orthophotos.",
+"links":[{"lTitle":"Intro","link":"/developer/en/api/dummy1/intro"}, {"lTitle":"Developers's Guide","link":"/developer/en/api/dummy1/guide"},{"lTitle":"API Reference","link":"/developer/en/api/dummy1/reference"}],
+"icon":"movie_filter"
+}
+]
